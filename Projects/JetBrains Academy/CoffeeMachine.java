@@ -187,45 +187,4 @@ public class CoffeeMachine {
     public void setCoffeeBeans(int beans) {
         coffeeBeans = beans;
     }
-
-
-    public static void countingCups() {
-        Scanner scanner = new Scanner(System.in);
-        int[] ints = new int[3];
-        System.out.println("Write how many ml of water the coffee machine has:");
-        ints[0] = scanner.nextInt() / 200;
-        System.out.println("Write how many ml of milk the coffee machine has:");
-        ints[1] = scanner.nextInt() / 50;
-        System.out.println("Write how many grams of coffee beans the coffee machine has:");
-        ints[2] = scanner.nextInt() / 15;
-        System.out.println("Write how many cups of coffee you will need:");
-        int min = Arrays.stream(ints).min().getAsInt();
-        int cups = scanner.nextInt();
-        if (cups > min) System.out.printf("No, I can make only %d cup(s) of coffee", min);
-        else if (cups == min) System.out.printf("Yes, I can make that amount of coffee", min);
-        else System.out.printf("Yes, I can make that amount of coffee (and even %d more than that)", min - cups);
-    }
-
-    public static void justPrinting() {
-        System.out.println("Starting to make a coffee");
-        System.out.println("Grinding coffee beans");
-        System.out.println("Boiling water");
-        System.out.println("Mixing boiled water with crushed coffee beans");
-        System.out.println("Pouring coffee into the cup");
-        System.out.println("Pouring some milk into the cup");
-        System.out.println("Coffee is ready!");
-    }
-
-    public static void countingIngredients() {
-        System.out.println("Write how many cups of coffee you will need: \n");
-        Scanner scanner = new Scanner(System.in);
-        int cups = scanner.nextInt();
-        int water = cups * 200;
-        int milk = cups * 50;
-        int beans = cups * 15;
-        System.out.println("For 25 cups of coffee you will need:");
-        System.out.printf("%d ml of water\n", water);
-        System.out.printf("%d ml of milk\n", milk);
-        System.out.printf("%d g of coffee beans\n", beans);
-    }
 }
