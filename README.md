@@ -6,4 +6,4 @@
  
  Simple banking app used technologies:
  - JDBC 
- - Java 14
+ - Java EE
